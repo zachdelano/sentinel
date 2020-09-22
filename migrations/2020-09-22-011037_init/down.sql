@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS camera;
+DROP TABLE IF EXISTS person;
+DROP TABLE IF EXISTS photo;
+DROP TABLE IF EXISTS person_photo;
+DROP TABLE IF EXISTS vehicle;
+DROP TABLE IF EXISTS encounter;
+DROP TABLE IF EXISTS person_encounter;
+DROP TABLE IF EXISTS vehicle_encounter;
+PRAGMA foreign_keys = OFF;
