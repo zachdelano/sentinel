@@ -1,6 +1,8 @@
 // use sqlite;
 use diesel::sqlite;
+use sentinel::db;
 
+// querying tasks: https://erwabook.com/intro/create-a-database-access-layer.html#querying-tasks
 fn main() {
     // let connection = sqlite::open(":memory:").unwrap();
 
