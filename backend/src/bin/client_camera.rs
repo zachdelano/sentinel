@@ -1,5 +1,5 @@
 use std::env;
-use sentinel::db::{create_camera, query_camera, establish_connection};
+use backend::db::{create_camera, query_camera, establish_connection};
 
 fn help() {
     println!("subcommands");
@@ -28,20 +28,7 @@ fn show_cameras(args: &[String]) {
     let conn = establish_connection();
     println!("CAMERAS\n-----");
     for camera in query_camera(&conn) {
-        // match camera.name {
-        //     Some(x) => println!("Camera name: {}", x),
-        //     None => println!("This camera has no name"),
-        // }
-        // match camera.address {
-        //     Some(x) => println!("Camera address: {}", x),
-        //     None => println!("This camera has no address"),
-        // }
-        match (camera.name, camera.address) {
-            (Some(x), Some(y)) => println!("{}, {}", x, y),
-            (Some(x), None) => println!("{}, no address found", x),
-            (None, Some(y)) => println!("no name found, {}", y),
-            (None, None) => println!("no name or address found"),
-        }
+        println!("name: {} \taddress: {}", camera.name, camera.address);
     }
 }
 

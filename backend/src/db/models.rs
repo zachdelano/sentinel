@@ -11,9 +11,9 @@ pub struct NewCamera<'a> {
     pub address: &'a str
 }
 
-#[derive(Queryable)]
+#[derive(Queryable, Serialize)]
 pub struct Camera {
     pub id: Option<i32>,
-    pub name: Option<String>,
-    pub address: Option<String>,
+    pub name: String,
+    pub address: String,
 }

@@ -1,69 +1,69 @@
 table! {
     camera (id) {
         id -> Nullable<Integer>,
-        name -> Nullable<Text>,
-        address -> Nullable<Text>,
+        name -> Text,
+        address -> Text,
     }
 }
 
 table! {
     encounter (id) {
         id -> Nullable<Integer>,
-        camera_id -> Nullable<Integer>,
-        time_start -> Nullable<Double>,
-        time_end -> Nullable<Double>,
+        camera_id -> Integer,
+        time_start -> Double,
+        time_end -> Double,
     }
 }
 
 table! {
     person (id) {
         id -> Nullable<Integer>,
-        name_first -> Nullable<Text>,
-        name_last -> Nullable<Text>,
-        is_of_interest -> Nullable<Integer>,
-        is_associate -> Nullable<Integer>,
+        name_first -> Text,
+        name_last -> Text,
+        is_of_interest -> Integer,
+        is_associate -> Integer,
     }
 }
 
 table! {
     person_encounter (id) {
         id -> Nullable<Integer>,
-        encounter_id -> Nullable<Integer>,
-        person_id -> Nullable<Integer>,
+        encounter_id -> Integer,
+        person_id -> Integer,
     }
 }
 
 table! {
     person_photo (id) {
         id -> Nullable<Integer>,
-        photo_id -> Nullable<Integer>,
-        person_id -> Nullable<Integer>,
+        photo_id -> Integer,
+        person_id -> Integer,
     }
 }
 
 table! {
     photo (id) {
         id -> Nullable<Integer>,
-        image -> Nullable<Text>,
-        taken -> Nullable<Double>,
+        image -> Text,
+        taken -> Double,
     }
 }
 
 table! {
     vehicle (id) {
         id -> Nullable<Integer>,
-        license -> Nullable<Text>,
-        make -> Nullable<Text>,
-        model -> Nullable<Text>,
-        color -> Nullable<Text>,
+        license -> Text,
+        make -> Text,
+        model -> Text,
+        color -> Text,
     }
 }
 
 table! {
     vehicle_encounter (id) {
         id -> Nullable<Integer>,
-        encounter_id -> Nullable<Integer>,
-        vehicle_id -> Nullable<Integer>,
+        encounter_id -> Integer,
+        vehicle_id -> Integer,
     }
 }
 
