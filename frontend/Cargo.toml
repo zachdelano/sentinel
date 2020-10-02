@@ -9,9 +9,9 @@ edition = "2018"
 [dependencies]
 sentinel = { path = ".." }
 yew = "0.17.3"
-wasm-pack = "0.9.1"
 wasm-bindgen = "0.2.68"
-web-sys = "0.3.45"
+# wasm-pack = "0.9.1"
+# web-sys = "0.3.45"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

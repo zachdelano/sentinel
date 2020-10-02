@@ -4,5 +4,5 @@ dependencies = ["create_wasm"]
 # https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm
 [tasks.create_wasm]
 command = "wasm-pack"
-args = ["build", "--target", "web", "--out-name", "package", "--dev"] 
+args = ["build", "--target", "web", "--out-name", "package", "--dev", "--out-dir", "./static"] 
 dependencies = ["build"]
