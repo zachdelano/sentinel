@@ -95,6 +95,7 @@ dependencies = [
  "gstreamer-rtsp-server",
  "rocket",
  "rocket_contrib",
+ "sentinel",
  "serde",
 ]
 
@@ -336,6 +337,7 @@ name = "frontend"
 version = "0.1.0"
 dependencies = [
  "sentinel",
+ "serde",
  "wasm-bindgen",
  "yew",
 ]
@@ -1527,6 +1529,9 @@ dependencies = [
 [[package]]
 name = "sentinel"
 version = "0.1.0"
+dependencies = [
+ "serde",
+]
 
 [[package]]
 name = "serde"

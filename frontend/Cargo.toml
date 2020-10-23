@@ -10,6 +10,7 @@ edition = "2018"
 sentinel = { path = ".." }
 yew = "0.17.3"
 wasm-bindgen = "0.2.68"
+serde = { version = "1.0.116", features = ["derive"] }
 # wasm-pack = "0.9.1"
 # web-sys = "0.3.45"
 
