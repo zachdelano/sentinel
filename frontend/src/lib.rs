@@ -5,12 +5,17 @@ use std::{
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
 use wasm_bindgen_futures::JsFuture;
+use wasm_logger;
+use log;
 use yew::prelude::*;
 use yewtil::future::LinkFuture;
 use yew::{html, Component, ComponentLink, Html, ShouldRender};
 use yew::services::ConsoleService;
 use sentinel::Camera;
 use web_sys::{Request, RequestInit, RequestMode, Response};
+// use web_sys::{Request, RequestInit, RequestMode, Response, view}; // ?
+
+mod view_camera;
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct FetchError {
@@ -114,8 +119,8 @@ impl Component for Model {
                 </>
             },
             FetchState::Success(data) => {
-                println!("{:?}",data);
-                html! { "Success" }
+                log::debug!("{:?}",data);
+                view_camera::index(&data)
             },
             FetchState::Failed(err) => html! { "Failed" },
         }
@@ -124,5 +129,6 @@ impl Component for Model {
 
 #[wasm_bindgen(start)]
 pub fn run_app() {
+    wasm_logger::init(wasm_logger::Config::default());
     App::<Model>::new().mount_to_body();
 }
