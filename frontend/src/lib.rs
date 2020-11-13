@@ -17,6 +17,7 @@ use web_sys::{Request, RequestInit, RequestMode, Response};
 
 mod view_camera;
 
+// https://github.com/yewstack/yew/blob/master/examples/crm/src/main.rs
 #[derive(Debug, Clone, PartialEq)]
 pub struct FetchError {
     err: JsValue,
@@ -62,7 +63,8 @@ async fn fetch_resource(url: &'static str) -> Result<String, FetchError> {
 struct Model {
     link: ComponentLink<Self>,
     value: i64,
-    cameras: FetchState<String>
+    cameras: FetchState<String>,
+    // cameras_api: Vec<Camera>
 }
 
 enum Msg {
