@@ -1,0 +1,18 @@
+[package]
+name = "watcher"
+version = "0.1.0"
+authors = ["zachdelano <z.delano@outlook.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gstreamer = "0.16.5"
+gstreamer-rtp = "0.16.5"
+gstreamer-rtsp = "0.16.5"
+gstreamer-rtsp-server = "0.16.5"
+gstreamer-base = "0.16.5"
+sentinel = { path = ".." }
+rtsp-2 = { git = "https://github.com/sgodwincs/rtsp-rs.git" }
+
+#ffmpeg = "0.3.0"
